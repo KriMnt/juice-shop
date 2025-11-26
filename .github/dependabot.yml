@@ -1,0 +1,15 @@
+version: 2
+updates:
+  # Monitorizează pachetele NPM (Node.js)
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    # Opțional: Deschide maxim 5 PR-uri deodată ca să nu te spameze
+    open-pull-requests-limit: 5
+
+  # Monitorizează Dockerfile-ul
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
